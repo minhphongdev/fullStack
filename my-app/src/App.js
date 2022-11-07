@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.scss';
 import AddProducts from './components/AddProducts';
 import Products from './components/Products/Products';
 import Nav from './components/Navigation/Nav';
