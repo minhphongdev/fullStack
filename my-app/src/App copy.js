@@ -8,29 +8,34 @@ import { Outlet } from "react-router-dom";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import {
+  BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
-import { Home, Login, Public } from './containers/public/';
-import path from './utils/path';
+import Home from './components/Home/Home';
 
 
 
 function App() {
-
-
   return (
 
     <div className="App">
 
-      <Routes>
+      <div className="app-header">
+        <Header />
+      </div>
 
-        <Route path={path.PUBLIC} element={<Public />}>
-          <Route path={path.HOME} element={<Home />} />
-          <Route path={path.LOGIN} element={<Login />} />
-          <Route path={path.START} element={<Home />} />
-        </Route>
-      </Routes>
+      <div className='main-content'>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="product" element={<Products />} />
+          <Route path="weather" element={<AddProducts />} />
+        </Routes>
+      </div>
+
+      <div className='app-footer'>
+        <Footer />
+      </div>
 
 
     </div>

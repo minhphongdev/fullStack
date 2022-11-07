@@ -8,17 +8,21 @@ import AddProducts from './components/AddProducts';
 import Home from './components/Home/Home';
 import {
   BrowserRouter,
-  Routes,
-  Route,
 } from "react-router-dom";
+import { Provider } from 'react-redux';
+import reduxConfig from './redux';
 
+const store = reduxConfig()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>
+
 
 );
 
