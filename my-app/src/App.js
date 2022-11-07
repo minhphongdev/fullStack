@@ -1,12 +1,6 @@
-import AddProducts from './components/AddProducts';
-import Products from './components/Products/Products';
-import Nav from './components/Navigation/Nav';
-import Weather from './components/weather/Wearther';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import { Outlet } from "react-router-dom";
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+
 import {
   Routes,
   Route,
